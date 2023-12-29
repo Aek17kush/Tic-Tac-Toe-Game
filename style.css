@@ -211,4 +211,8 @@ text-align: center;}
     .scoreboard{
         margin: 10% 0;
     }
+    .new-game{
+        font-size: 40px;
+        -webkit-text-stroke: 1px #ffffff;
+    }
 }

@@ -21,7 +21,7 @@ let arr = [[0, 1, 2],
 const checkWinner = () => {
     for (let ele of arr) {
         if ((board[ele[0]] === board[ele[1]]) && (board[ele[1]] === board[ele[2]]) && (board[ele[2]] !== 0)) {
-            result.innerHTML = "<pre><p>&#127882;&#127882;Congratulations&#127882;&#127882;</p>    Winner: Player " + boxs[ele[2]].innerHTML + "&#127942;</pre>";
+            (vsComp) ? result.innerHTML = "YOU LOSE" : result.innerHTML = "<pre><p>&#127882;&#127882;Congratulations&#127882;&#127882;</p>    Winner: Player " + boxs[ele[2]].innerHTML + "&#127942;</pre>";
             document.querySelector(".box-container").classList.add("disabledbutton");
             document.getElementsByTagName("td")[+ turnOfX].innerHTML = 1 + +(document.getElementsByTagName("td")[+ turnOfX].innerHTML);
             rounds = rounds + 1;
@@ -108,23 +108,23 @@ const mark = (e) => {
         if (e.target.disabled = true) {
             count = count + 1;
         }
-        turnOfX = !turnOfX;
         if (!checkWinner() && count == 9) {
             result.innerHTML = "Draw";
             rounds = rounds + 1;
         }
+        turnOfX = !turnOfX;
     }
     else {
         e.target.innerHTML = "X";
         board[Number(e.target.id)] = -1;
         e.target.disabled = true;
         count = count + 1;
-        turnOfX = !turnOfX;
         if (!checkWinner() && count == 9) {
             result.innerHTML = "Draw";
             rounds = rounds + 1;
             return;
         }
+        turnOfX = !turnOfX;
 
         // computers turn 
 
@@ -156,6 +156,7 @@ newGame.addEventListener("click", () => {
             break;
         }
     }
+    (vsComp) ? document.getElementsByTagName("th")[0].innerHTML = "Computer" : document.getElementsByTagName("th")[0].innerHTML = "Player O";
     setTimeout(() => { newGame.innerHTML = "New Game"; }, 1000);
     rounds = 1;
     reset();

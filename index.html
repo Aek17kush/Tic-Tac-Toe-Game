@@ -11,8 +11,23 @@
 <body>
     <div class="game">
         <div class="header">
-            <h1>Tic Tac Toe Game</h1>
-            <button class="new-game">Start Game</button>
+            <div class="header-container">
+                <h1>Tic Tac Toe Game</h1>
+                <div class="choose-opponent">
+                    <input class="input-btn" type="radio" id="valueIs-1" name="opponent" checked="" value="1">
+                    <label class="neon-btn" for="valueIs-1">
+                        <span class="span"></span>
+                        <span class="txt">Vs Computer</span>
+                    </label>
+
+                    <input class="input-btn" type="radio" id="valueIs-2" name="opponent" value="0">
+                    <label class="neon-btn" for="valueIs-2">
+                        <span class="span"></span>
+                        <span class="txt">Two Players</span>
+                    </label>
+                </div>
+                <button class="new-game">Start Game</button>
+            </div>
         </div>
         <div class="game-container">
             <div class="result">
@@ -20,15 +35,15 @@
             </div>
             <div class="container">
                 <div class="box-container">
-                    <button class="box"></button>
-                    <button class="box"></button>
-                    <button class="box"></button>
-                    <button class="box"></button>
-                    <button class="box"></button>
-                    <button class="box"></button>
-                    <button class="box"></button>
-                    <button class="box"></button>
-                    <button class="box"></button>
+                    <button id="0" class="box"></button>
+                    <button id="1" class="box"></button>
+                    <button id="2" class="box"></button>
+                    <button id="3" class="box"></button>
+                    <button id="4" class="box"></button>
+                    <button id="5" class="box"></button>
+                    <button id="6" class="box"></button>
+                    <button id="7" class="box"></button>
+                    <button id="8" class="box"></button>
                 </div>
                 <div class="info">
                     <div class="scoreboard">
@@ -36,14 +51,14 @@
                         <div>
                             <table class="rwd-table">
                                 <tr>
-                                  <th>Player O</th>
-                                  <th>Player X</th>
+                                    <th>Player O</th>
+                                    <th>Player X</th>
                                 </tr>
                                 <tr>
-                                  <td data-th="Player O">0</td>
-                                  <td data-th="Player X">0</td>
+                                    <td data-th="Player O">0</td>
+                                    <td data-th="Player X">0</td>
                                 </tr>
-                              </table>
+                            </table>
                         </div>
                     </div>
                     <div class="resethomebtn">

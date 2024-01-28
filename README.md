@@ -50,6 +50,13 @@ The scoreboard keeps track of the number of rounds won by each player. The score
 ## Screenshots
 
 Include screenshots of the game interface, a sample round, and the scoreboard.
+![tic-tac-toe-1](https://github.com/Aek17kush/Tic-Tac-Toe-Game/assets/101319909/47b4d411-d44e-4c7f-8297-2e72a3cef5b4)
+![tic-tac-toe-2](https://github.com/Aek17kush/Tic-Tac-Toe-Game/assets/101319909/2280b5b2-9414-4eb2-94c1-28b17ab53e09)
+![tic-tac-toe-3](https://github.com/Aek17kush/Tic-Tac-Toe-Game/assets/101319909/1d50aeac-e4f4-4028-8844-29c0281e7c0b)
+
+
+
+
 
 ## Contributing
 
